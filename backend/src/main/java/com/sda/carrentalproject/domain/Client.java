@@ -38,6 +38,12 @@ public class Client {
 
     private LocalDate dateOfBirth;
 
-    void recordRegistrationDateTime() {}
+    @PrePersist
+
+    void recordRegistrationDateTime() {
+        if (registrationDateTime == null) {
+            registrationDateTime = LocalDateTime.now();
+        }
+    }
 
 }
