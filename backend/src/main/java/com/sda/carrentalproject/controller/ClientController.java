@@ -1,3 +1,4 @@
+
 package com.sda.carrentalproject.controller;
 
 import com.sda.carrentalproject.dto.ClientDto;
@@ -30,7 +31,8 @@ public class ClientController {
         var clients = clientService.getAllClients();
 
         return clients.stream()
-                .map(client -> clientMapper.fromEntityToDto(client))
+//                .map(client -> clientMapper.fromEntityToDto(client))
+                .map(clientMapper::fromEntityToDto)
                 .toList();
     }
 }

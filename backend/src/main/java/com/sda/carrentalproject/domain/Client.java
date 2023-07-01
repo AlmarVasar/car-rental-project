@@ -38,4 +38,6 @@ public class Client {
 
     private LocalDate dateOfBirth;
 
+    void recordRegistrationDateTime() {}
+
 }

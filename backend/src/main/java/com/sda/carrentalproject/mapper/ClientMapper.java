@@ -6,21 +6,20 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ClientMapper implements Mapper<Client, ClientDto> {
-
     @Override
-        public ClientDto fromEntityToDto(Client entity) {
-            return ClientDto.builder()
-                    .id(entity.getId())
-                    .name(entity.getName())
-                    .surname(entity.getSurname())
-                    .phone(entity.getPhone())
-                    .email(entity.getEmail())
-                    .address(entity.getAddress())
-                    .hasDrivingLicense(entity.isHasDrivingLicense())
-                    .registrationDateTime(entity.getRegistrationDateTime())
-                    .dateOfBirth(entity.getDateOfBirth())
-                    .build();
-        }
+    public ClientDto fromEntityToDto(Client entity) {
+        return ClientDto.builder()
+                .id(entity.getId())
+                .name(entity.getName())
+                .surname(entity.getSurname())
+                .phone(entity.getPhone())
+                .email(entity.getEmail())
+                .address(entity.getAddress())
+                .hasDrivingLicense(entity.isHasDrivingLicense())
+                .registrationDateTime(entity.getRegistrationDateTime())
+                .dateOfBirth(entity.getDateOfBirth())
+                .build();
+    }
 
     @Override
     public Client fromDtoToEntity(ClientDto dto) {
