@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "name": "Almar",
+    "surname": "Vasar",
+    "phone": "54694549",
+    "email": "kahvel@gmail.com",
+    "address": "Tallinn",
+    "hasDrivingLicense": false,
+    "registrationDateTime": "2023-07-02T11:37:57.760616",
+    "dateOfBirth": "1992-01-07"
+  }
+]
