@@ -7,11 +7,11 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Builder
-public record ClientDto(  Long id,
+public record ClientDto( Long id,
 
-         String name,
+        String name,
 
-         String surname,
+        String surname,
 
          String phone,
 
