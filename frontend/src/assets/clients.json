@@ -1,15 +1,24 @@
 [
   {
     "id": 1,
-    "name": "Almar",
-    "surname": "Vasar",
-    "phone": "54694549",
-    "email": "kahvel@gmail.com",
-    "address": "Tallinn",
+    "name": "mariusz",
+    "surname": "p",
+    "phone": "555-555-555",
+    "email": "mp@gmail.com",
+    "address": "poland",
     "hasDrivingLicense": false,
-    "registrationDateTime": "2023-07-02T11:37:57.760616",
-    "dateOfBirth": "1992-01-07"
-  }]
-
-
-
+    "registrationDateTime": "2023-07-02T10:37:41.236961",
+    "dateOfBirth": "1990-01-07"
+  },
+  {
+    "id": 2,
+    "name": "denis",
+    "surname": "p",
+    "phone": "123-555-555",
+    "email": "denis@gmail.com",
+    "address": "poland",
+    "hasDrivingLicense": false,
+    "registrationDateTime": "2023-07-02T10:37:41.236961",
+    "dateOfBirth": "1990-01-07"
+  }
+]

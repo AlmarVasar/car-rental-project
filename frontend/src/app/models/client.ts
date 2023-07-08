@@ -1,14 +1,13 @@
 export interface Client {
+  id: number;
 
-  id : number;
+  name: string;
 
-  name : string;
+  surname: string;
 
-  surname : string;
+  phone: string;
 
-  phone : string;
-
-  email : string;
+  email: string;
 
   address: string | null;
 
@@ -16,5 +15,5 @@ export interface Client {
 
   registrationDateTime: string;
 
-  dateOfBirth: string;
+  dateOfBirth: string
 }
