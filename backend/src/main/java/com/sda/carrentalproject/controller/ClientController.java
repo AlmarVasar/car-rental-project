@@ -5,6 +5,7 @@ import com.sda.carrentalproject.dto.ClientDto;
 import com.sda.carrentalproject.mapper.ClientMapper;
 import com.sda.carrentalproject.service.ClientService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,8 +20,8 @@ import java.util.List;
 public class ClientController {
 
     private final ClientService clientService;
-
     private final ClientMapper clientMapper;
+
 
     public ClientController(ClientService clientService, ClientMapper clientMapper) {
         this.clientService = clientService;
