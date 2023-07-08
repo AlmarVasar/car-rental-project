@@ -27,5 +27,14 @@ public class ClientService {
 
         return result;
     }
+
+    public Client saveClient(Client clientEntity) {
+        log.info("creating new client: [{}]", clientEntity);
+
+        var result = clientRepository.save(clientEntity);
+        log.info("saved client: [{}]", result);
+
+        return result;
+    }
 }
 
