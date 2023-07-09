@@ -13,11 +13,13 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import { HomePageComponent } from './components/home-page/home-page.component';
-import {RouterModule, RouterOutlet} from "@angular/router";
+import { RouterModule } from '@angular/router';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {clientsPageUrl, homePageUrl, notFoundPageUrl} from "./models/links";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import {clientsPageUrl, homePageUrl, notFoundPageUrl} from "./models/links";
     NavigationBarComponent,
     HomePageComponent,
     NotFoundPageComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -37,14 +40,15 @@ import {clientsPageUrl, homePageUrl, notFoundPageUrl} from "./models/links";
     MatSortModule,
     MatPaginatorModule,
     MatButtonToggleModule,
-    RouterOutlet,
     RouterModule.forRoot([
       {path: homePageUrl, component: HomePageComponent},
       {path: clientsPageUrl, component: ClientsComponent},
       {path: notFoundPageUrl, component: NotFoundPageComponent}
     ]),
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
