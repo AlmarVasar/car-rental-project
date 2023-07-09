@@ -28,7 +28,7 @@ export class ClientsComponent implements OnInit {
     address: new FormControl(''),
     hasDrivingLicense: new FormControl(false, Validators.required),
     registrationDateTime: new FormControl(null),
-    dateOfBirth: new FormControl('', [Validators.required, Validators.minLength(10)])
+    dateOfBirth: new FormControl('YYYY-MM-DD', [Validators.required, Validators.minLength(10)])
   });
 
 
@@ -39,6 +39,33 @@ export class ClientsComponent implements OnInit {
     this.dataSource = new MatTableDataSource(this.clients);
     console.log("Logging");
   }
+
+  get name() {
+    return this.clientForm.controls.name;
+  }
+
+  get surname() {
+    return this.clientForm.controls.surname;
+  }
+
+  get phone() {
+    return this.clientForm.controls.phone;
+  }
+
+  get email() {
+  return this.clientForm.controls.email;
+}
+
+  get address() {
+    return this.clientForm.controls.address;
+  }
+  get drivingLicense() {
+    return this.clientForm.controls.hasDrivingLicense;
+  }
+  get dateOfBirth() {
+    return this.clientForm.controls.dateOfBirth;
+  }
+
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
