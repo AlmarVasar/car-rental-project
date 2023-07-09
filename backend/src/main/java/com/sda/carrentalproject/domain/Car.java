@@ -29,7 +29,13 @@ public class Car {
 
     private YearMonth productionYear;
 
+    @Enumerated(EnumType.STRING)
     private Color color;
+
+    private boolean available;
+
+    private boolean priceList;
+
 
 
 }
