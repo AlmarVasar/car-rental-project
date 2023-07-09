@@ -34,7 +34,7 @@ public class Car {
 
     private boolean available;
 
-    private boolean priceList;
+    private PriceList priceList;
 
 
 
