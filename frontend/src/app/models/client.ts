@@ -14,7 +14,7 @@ export interface Client {
 
   hasDrivingLicense: boolean;
 
-  registrationDateTime: string;
+  registrationDateTime: string | null;
 
   dateOfBirth: string;
 }
