@@ -21,11 +21,12 @@ public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
 
-    private String Brand;
+    private String brand;
 
-    private String Model;
+    private String model;
 
     private YearMonth productionYear;
 
