@@ -18,6 +18,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {clientsPageUrl, homePageUrl, notFoundPageUrl} from "./models/links";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { CarsComponent } from './components/cars/cars.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     NavigationBarComponent,
     HomePageComponent,
     NotFoundPageComponent,
+    CarsComponent,
 
   ],
   imports: [
