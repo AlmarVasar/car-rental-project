@@ -13,7 +13,6 @@ import java.util.stream.Collectors;
 @RestController
 @Slf4j
 @RequestMapping("/api")
-@CrossOrigin("*")
 
 public class CarController {
     private final CarService carService;
@@ -26,13 +25,11 @@ public class CarController {
     }
 
     @GetMapping("/cars")
-    List<CarDto> getAllCars() {
+     List<CarDto> getAllCars() {
         log.info("all cars endpoint");
-        var cars = carService.getAllCars();
+        var cars = carService.getAllCars( );
 
-
-
-       return cars.stream()
+        return cars.stream()
                 //.map(car -> carMapper.fromEntityToDto(car))
                 .map(carMapper::fromEntityToDto)
                 .toList();

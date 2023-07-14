@@ -3,6 +3,7 @@ const serverUrl = "http://localhost:8080"
 export const allClientsUrl = `${serverUrl}/api/clients`
 export const createClientUrl = `${serverUrl}/api/clients`
 
+
 export const allCarsUrl = `${serverUrl}/api/cars`
 export const createCarUrl = `${serverUrl}/api/cars`
 
@@ -10,3 +11,4 @@ export const createCarUrl = `${serverUrl}/api/cars`
 export const homePageUrl = ''
 export const clientsPageUrl = 'clients'
 export const notFoundPageUrl = '**'
+export const carsPageUrl = 'cars'

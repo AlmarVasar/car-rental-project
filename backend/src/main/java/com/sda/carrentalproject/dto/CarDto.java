@@ -9,7 +9,6 @@ import lombok.Builder;
 
 import java.time.YearMonth;
 
-@Table( name = "Cars")
 @Builder
 public record CarDto( Long id,
 

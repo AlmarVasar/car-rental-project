@@ -15,7 +15,7 @@ import java.time.YearMonth;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table( name = "Cars")
+@Table( name = "CARS")
 //TODO : homework!  implement on java and angular side
 public class Car {
 

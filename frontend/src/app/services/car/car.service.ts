@@ -15,6 +15,7 @@ export class CarService {
   ) { }
 
   getAllCars() : Observable<Array<Car>>{
+    console.log("calling!!")
     return this.http.get<Array<Car>>(allCarsUrl)
   }
 

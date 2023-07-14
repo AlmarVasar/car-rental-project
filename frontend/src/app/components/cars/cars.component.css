@@ -9,3 +9,15 @@ table {
 
 
 
+
+label {
+  display: block;
+  margin: .5em 0;
+  font-weight: bold;
+
+}
+
+.alert {
+  color: red;
+}
+

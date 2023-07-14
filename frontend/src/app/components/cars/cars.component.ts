@@ -3,7 +3,6 @@ import {MatTableDataSource} from "@angular/material/table";
 import {MatSort} from "@angular/material/sort";
 import {MatPaginator} from "@angular/material/paginator";
 import {CarService} from "../../services/car/car.service";
-import {Client} from "../../models/client";
 import {Car} from "../../models/car";
 
 
@@ -14,7 +13,7 @@ import {Car} from "../../models/car";
 
 })
 export class CarsComponent implements OnInit{
-  displayedColumns: Array<string> = ['id', 'model', 'productionYear', 'colour','available','priceList'];
+  displayedColumns: Array<string> = ['id', 'brand', 'model', 'productionYear', 'colour','available'];
   dataSource: MatTableDataSource<Car>;
   cars: Array<Car> = [];
 
@@ -34,7 +33,7 @@ export class CarsComponent implements OnInit{
     this.carService.getAllCars()
       .subscribe(cars => {
       this.cars = cars;
-      this.dataSource = new MatTableDataSource<Car>(this.cars);
+      this.dataSource.data = this.cars;
       console.log(`results: ${JSON.stringify(cars, null, 2)}`);
     });
   }

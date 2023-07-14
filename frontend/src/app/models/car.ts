@@ -6,7 +6,7 @@ export interface Car {
 
   productionYear : string;
 
-  colour : string;
+  colour : boolean ;
 
   available : boolean;
 
