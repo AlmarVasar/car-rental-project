@@ -13,7 +13,7 @@ import {Car} from "../../models/car";
 
 })
 export class CarsComponent implements OnInit{
-  displayedColumns: Array<string> = ['id', 'brand', 'model', 'productionYear', 'colour','available'];
+  displayedColumns: Array<string> = ['id', 'brand', 'model', 'productionYear', 'color','available'];
   dataSource: MatTableDataSource<Car>;
   cars: Array<Car> = [];
 
