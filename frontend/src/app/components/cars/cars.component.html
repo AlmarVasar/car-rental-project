@@ -14,22 +14,34 @@
       <td mat-cell *matCellDef="let row"> {{row.id}} </td>
     </ng-container>
 
-    <!-- Progress Column -->
-    <ng-container matColumnDef="progress">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
-      <td mat-cell *matCellDef="let row"> {{row.progress}}% </td>
+    <!-- Model Column -->
+    <ng-container matColumnDef="model">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Model</th>
+      <td mat-cell *matCellDef="let row"> {{row.model}}% </td>
     </ng-container>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-      <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+    <!-- ProductionYear Column -->
+    <ng-container matColumnDef="productionYear">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Productionyear </th>
+      <td mat-cell *matCellDef="let row"> {{row.productionYear}} </td>
     </ng-container>
 
-    <!-- Fruit Column -->
-    <ng-container matColumnDef="fruit">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Fruit </th>
-      <td mat-cell *matCellDef="let row"> {{row.fruit}} </td>
+    <!-- Colour Column -->
+    <ng-container matColumnDef="colour">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Colour </th>
+      <td mat-cell *matCellDef="let row"> {{row.colour}} </td>
+    </ng-container>
+
+    <!-- Available Column -->
+    <ng-container matColumnDef="available">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Available </th>
+      <td mat-cell *matCellDef="let row"> {{row.available}} </td>
+    </ng-container>
+
+    <!-- Pricelist Column -->
+    <ng-container matColumnDef="PriceList">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Pricelist </th>
+      <td mat-cell *matCellDef="let row"> {{row.priceList}} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

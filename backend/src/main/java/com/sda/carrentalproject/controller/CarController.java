@@ -30,6 +30,8 @@ public class CarController {
         log.info("all cars endpoint");
         var cars = carService.getAllCars();
 
+
+
        return cars.stream()
                 //.map(car -> carMapper.fromEntityToDto(car))
                 .map(carMapper::fromEntityToDto)
