@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 @RestController
 @Slf4j
 @RequestMapping("/api")
-@CrossOrigin
+@CrossOrigin("*")
 
 public class CarController {
     private final CarService carService;
