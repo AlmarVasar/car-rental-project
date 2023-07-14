@@ -17,7 +17,6 @@ import java.util.stream.Collectors;
 
 public class CarController {
     private final CarService carService;
-
     private final CarMapper carMapper;
 
 

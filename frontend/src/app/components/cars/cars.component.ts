@@ -2,6 +2,9 @@ import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
 import {MatSort} from "@angular/material/sort";
 import {MatPaginator} from "@angular/material/paginator";
+import {CarService} from "../../services/car/car.service";
+import {Client} from "../../models/client";
+import {Car} from "../../models/car";
 
 
 
@@ -55,11 +58,15 @@ const NAMES: string[] = [
 export class CarsComponent implements AfterViewInit{
   displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
   dataSource: MatTableDataSource<UserData>;
+  cars: Array<Car> = [];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor() {
+  constructor(
+    private carService: CarService
+  ) {
+
     // Create 100 users
     const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
 
@@ -70,6 +77,10 @@ export class CarsComponent implements AfterViewInit{
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+    this.carService.getAllCars().subscribe(cars => {
+      this.cars = cars;
+      console.log(`results: ${JSON.stringify(cars, null, 2)}`);
+    });
   }
 
   applyFilter(event: Event) {

@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "brand": "BMW",
+    "model": "335",
+    "productionYear": "2015-11",
+    "color": "BLACK",
+    "available": true,
+    "priceList": {}
+  }
+]
