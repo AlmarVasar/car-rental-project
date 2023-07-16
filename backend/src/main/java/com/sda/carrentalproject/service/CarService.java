@@ -37,15 +37,14 @@ public class CarService {
 
     public Car findCarWithId(long id) {
         log.info("trying to find car with id: [{}]", id);
-
         return carRepository.findById(id)
                 .map(car -> {
                     log.info("Found car: [{}]", car);
                     return car;
                 })
                 .orElseThrow(() -> new WrongCarIdException("No car with given id: [%s]".formatted(id)));
-    }
 
+    }
     public Car findAvailableCarWithId(long id) {
         log.info("trying to find available car with given id: [{}]", id);
         return carRepository.findByIdAndAvailableTrue(id)
@@ -56,4 +55,3 @@ public class CarService {
                 .orElseThrow(() -> new WrongCarIdException("Car with given id: [%s] is unavailable!".formatted(id)));
     }
 }
-
