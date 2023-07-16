@@ -1,13 +1,12 @@
 package com.sda.carrentalproject.service;
 
 import com.sda.carrentalproject.domain.Car;
+import com.sda.carrentalproject.exception.WrongCarIdException;
 import com.sda.carrentalproject.repository.CarRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @Slf4j
@@ -19,14 +18,42 @@ public class CarService {
     public CarService(CarRepository carRepository) {
         this.carRepository = carRepository;
     }
-public List<Car> getAllCars(){
-        log.info("getting all cars from repository");
+    public List<Car> getAllCars() {
 
-        var result =carRepository.findAll();
+            log.info("getting all cars from repository");
 
-    log.info("found [{}] cars", result.size());
-    log.debug("cars: " + result);
+            var result =carRepository.findAll();
 
-    return result;
+            log.info("found [{}] cars", result.size());
+            log.debug("cars: " + result);
+
+            return result;
+    }
+
+    public Car save(Car carToBook) {
+        log.info("trying to save new car: [{}]", carToBook);
+        return carRepository.save(carToBook);
+    }
+
+    public Car findCarWithId(long id) {
+        log.info("trying to find car with id: [{}]", id);
+
+        return carRepository.findById(id)
+                .map(car -> {
+                    log.info("Found car: [{}]", car);
+                    return car;
+                })
+                .orElseThrow(() -> new WrongCarIdException("No car with given id: [%s]".formatted(id)));
+    }
+
+    public Car findAvailableCarWithId(long id) {
+        log.info("trying to find available car with given id: [{}]", id);
+        return carRepository.findByIdAndAvailableTrue(id)
+                .map(car -> {
+                    log.info("Found available car: [{}]", car);
+                    return car;
+                })
+                .orElseThrow(() -> new WrongCarIdException("Car with given id: [%s] is unavailable!".formatted(id)));
+    }
 }
-}
+
