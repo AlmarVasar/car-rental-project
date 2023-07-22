@@ -19,6 +19,7 @@ public record ClientDto(Long id,
                         @Size(min = 7)
                         String phone,
                         @Email
+                        @NotNull
                         String email,
                         String address,
                         boolean hasDrivingLicense,
