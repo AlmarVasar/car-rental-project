@@ -10,8 +10,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDate;
-import java.time.Month;
 import java.time.YearMonth;
 
 @Component
@@ -30,7 +28,7 @@ public class CarDataInitializer implements CommandLineRunner {
 
         log.info("Creating some cars");
 
-        Car car = Car.builder()
+        Car car1 = Car.builder()
                 .brand("BMW")
                 .model("335")
                 .productionYear(YearMonth.of(2015,11))
@@ -40,6 +38,43 @@ public class CarDataInitializer implements CommandLineRunner {
                 .build();
 
 
-        carRepository.save(car);
+
+        carRepository.save(car1);
+
+        Car car2 = Car.builder()
+                .brand("TOYOTA")
+                .model("Camry")
+                .productionYear(YearMonth.of(2020, 3))
+                .color(Color.RED)
+                .available(true)
+                .priceList(new PriceList())
+                .build();
+
+        carRepository.save(car2);
+
+        Car car3 = Car.builder()
+                .brand("AUDI")
+                .model("A8")
+                .productionYear(YearMonth.of(2022, 3))
+                .color(Color.BLUE)
+                .available(true)
+                .priceList(new PriceList())
+                .build();
+
+        carRepository.save(car3);
+
+        Car car4 = Car.builder()
+                .brand("VOLKSWAGEN")
+                .model("GOLF5")
+                .productionYear(YearMonth.of(2019, 1))
+                .color(Color.SILVER)
+                .available(true)
+                .priceList(new PriceList())
+                .build();
+
+        carRepository.save(car4);
     }
+
+
+
 }
